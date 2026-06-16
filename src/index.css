@@ -1,0 +1,572 @@
+@import "tailwindcss";
+
+/* ----------------------------------------------------
+   10 CUSTOM THEMES: 5 DARK & 5 LIGHT
+   ---------------------------------------------------- */
+
+/* Default / Classic Dark: Dark Indigo Zinc */
+.theme-cosmic-slate {
+  --bg-app: #09090b;
+  --text-app: #f4f4f5;
+  --text-muted: #71717a;
+  --card-bg: rgba(255, 255, 255, 0.03);
+  --card-border: rgba(255, 255, 255, 0.08);
+  --panel-bg: rgba(0, 0, 0, 0.3);
+  --accent: #6366f1;
+  --accent-text: #818cf8;
+  --accent-glow: rgba(99, 102, 241, 0.15);
+  --node-unvisited-bg: #18181b;
+  --node-unvisited-stroke: #4b5563;
+  --node-unvisited-text: #94a3b8;
+  --node-visited-bg: #111827;
+  --node-visited-stroke: #4338ca;
+  --node-visited-text: #e0e7ff;
+  --node-queue-bg: #2d3748;
+  --node-queue-stroke: #eab308;
+  --node-queue-text: #fef08a;
+  --node-active-bg: #1e1b4b;
+  --node-active-stroke: #6366f1;
+  --node-active-text: #ffffff;
+  --node-path-bg: #064e3b;
+  --node-path-stroke: #10b981;
+  --node-path-text: #ffffff;
+  --node-failed-bg: #2d1616;
+  --node-failed-stroke: #ef4444;
+  --node-failed-text: #fca5a5;
+  --header-bg: rgba(9, 9, 11, 0.85);
+  --input-bg: #030712;
+  --canvas-grid-bg: #121021;
+}
+
+/* Dark Theme 2: Midnight Cyber (Neon Cyan/Teal/Black) */
+.theme-cyber-dark {
+  --bg-app: #030712;
+  --text-app: #e2f1f7;
+  --text-muted: #4b6b80;
+  --card-bg: rgba(6, 182, 212, 0.04);
+  --card-border: rgba(6, 182, 212, 0.2);
+  --panel-bg: rgba(2, 6, 23, 0.6);
+  --accent: #06b6d4;
+  --accent-text: #22d3ee;
+  --accent-glow: rgba(6, 182, 212, 0.15);
+  --node-unvisited-bg: #0b1329;
+  --node-unvisited-stroke: #1e293b;
+  --node-unvisited-text: #38bdf8;
+  --node-visited-bg: #082f49;
+  --node-visited-stroke: #0284c7;
+  --node-visited-text: #e0f2fe;
+  --node-queue-bg: #422006;
+  --node-queue-stroke: #f59e0b;
+  --node-queue-text: #fef3c7;
+  --node-active-bg: #0c4a6e;
+  --node-active-stroke: #06b6d4;
+  --node-active-text: #ffffff;
+  --node-path-bg: #14532d;
+  --node-path-stroke: #10b981;
+  --node-path-text: #ffffff;
+  --node-failed-bg: #451a03;
+  --node-failed-stroke: #ef4444;
+  --node-failed-text: #fca5a5;
+  --header-bg: rgba(3, 7, 18, 0.85);
+  --input-bg: #020617;
+  --canvas-grid-bg: #051624;
+}
+
+/* Dark Theme 3: Solarized Abyss */
+.theme-solarized-abyss {
+  --bg-app: #00212b;
+  --text-app: #93a1a1;
+  --text-muted: #586e75;
+  --card-bg: rgba(7, 54, 66, 0.4);
+  --card-border: rgba(42, 161, 152, 0.25);
+  --panel-bg: rgba(0, 43, 54, 0.7);
+  --accent: #2aa198;
+  --accent-text: #2aa198;
+  --accent-glow: rgba(42, 161, 152, 0.2);
+  --node-unvisited-bg: #073642;
+  --node-unvisited-stroke: #586e75;
+  --node-unvisited-text: #93a1a1;
+  --node-visited-bg: #002b36;
+  --node-visited-stroke: #268bd2;
+  --node-visited-text: #268bd2;
+  --node-queue-bg: #5c3900;
+  --node-queue-stroke: #b58900;
+  --node-queue-text: #fdf6e3;
+  --node-active-bg: #002b36;
+  --node-active-stroke: #cb4b16;
+  --node-active-text: #cb4b16;
+  --node-path-bg: #073642;
+  --node-path-stroke: #859900;
+  --node-path-text: #859900;
+  --node-failed-bg: #1f0101;
+  --node-failed-stroke: #dc322f;
+  --node-failed-text: #fdf6e3;
+  --header-bg: rgba(0, 33, 43, 0.85);
+  --input-bg: #001c24;
+  --canvas-grid-bg: #002330;
+}
+
+/* Dark Theme 4: Vampire Crimson (Blood Red / Burgundy) */
+.theme-vampire-crimson {
+  --bg-app: #0c0205;
+  --text-app: #f1e2e4;
+  --text-muted: #806165;
+  --card-bg: rgba(225, 29, 72, 0.04);
+  --card-border: rgba(225, 29, 72, 0.25);
+  --panel-bg: rgba(20, 5, 10, 0.6);
+  --accent: #e11d48;
+  --accent-text: #f43f5e;
+  --accent-glow: rgba(225, 29, 72, 0.15);
+  --node-unvisited-bg: #1a050d;
+  --node-unvisited-stroke: #4c0519;
+  --node-unvisited-text: #fda4af;
+  --node-visited-bg: #881337;
+  --node-visited-stroke: #db2777;
+  --node-visited-text: #fce7f3;
+  --node-queue-bg: #451a03;
+  --node-queue-stroke: #d97706;
+  --node-queue-text: #fef3c7;
+  --node-active-bg: #9f1239;
+  --node-active-stroke: #f43f5e;
+  --node-active-text: #ffffff;
+  --node-path-bg: #115e59;
+  --node-path-stroke: #14b8a6;
+  --node-path-text: #ffffff;
+  --node-failed-bg: #270202;
+  --node-failed-stroke: #dc2626;
+  --node-failed-text: #fecaca;
+  --header-bg: rgba(12, 2, 5, 0.85);
+  --input-bg: #16040a;
+  --canvas-grid-bg: #20040e;
+}
+
+/* Dark Theme 5: Aura Orchid (Grape Purple Cyberpunk) */
+.theme-aura-orchid {
+  --bg-app: #0a0614;
+  --text-app: #f3eefc;
+  --text-muted: #7b6d9c;
+  --card-bg: rgba(168, 85, 247, 0.04);
+  --card-border: rgba(168, 85, 247, 0.25);
+  --panel-bg: rgba(23, 10, 41, 0.6);
+  --accent: #a855f7;
+  --accent-text: #c084fc;
+  --accent-glow: rgba(168, 85, 247, 0.15);
+  --node-unvisited-bg: #1b1136;
+  --node-unvisited-stroke: #3b0764;
+  --node-unvisited-text: #d8b4fe;
+  --node-visited-bg: #581c87;
+  --node-visited-stroke: #8b5cf6;
+  --node-visited-text: #f5f3ff;
+  --node-queue-bg: #431407;
+  --node-queue-stroke: #ea580c;
+  --node-queue-text: #ffedd5;
+  --node-active-bg: #6b21a8;
+  --node-active-stroke: #d8b4fe;
+  --node-active-text: #ffffff;
+  --node-path-bg: #065f46;
+  --node-path-stroke: #34d399;
+  --node-path-text: #ffffff;
+  --node-failed-bg: #310d0d;
+  --node-failed-stroke: #ef4444;
+  --node-failed-text: #fca5a5;
+  --header-bg: rgba(10, 6, 20, 0.85);
+  --input-bg: #120924;
+  --canvas-grid-bg: #1e0933;
+}
+
+/* Light Theme 1: Classic Pure Indigo */
+.theme-classic-pure {
+  --bg-app: #f8fafc;
+  --text-app: #0f172a;
+  --text-muted: #64748b;
+  --card-bg: #ffffff;
+  --card-border: rgba(15, 23, 42, 0.08);
+  --panel-bg: #f1f5f9;
+  --accent: #4f46e5;
+  --accent-text: #4f46e5;
+  --accent-glow: rgba(79, 70, 229, 0.06);
+  --node-unvisited-bg: #ffffff;
+  --node-unvisited-stroke: #94a3b8;
+  --node-unvisited-text: #475569;
+  --node-visited-bg: #e0e7ff;
+  --node-visited-stroke: #4f46e5;
+  --node-visited-text: #312e81;
+  --node-queue-bg: #fef9c3;
+  --node-queue-stroke: #ca8a04;
+  --node-queue-text: #713f12;
+  --node-active-bg: #6366f1;
+  --node-active-stroke: #4f46e5;
+  --node-active-text: #ffffff;
+  --node-path-bg: #d1fae5;
+  --node-path-stroke: #10b981;
+  --node-path-text: #064e3b;
+  --node-failed-bg: #fee2e2;
+  --node-failed-stroke: #ef4444;
+  --node-failed-text: #991b1b;
+  --header-bg: rgba(248, 250, 252, 0.85);
+  --input-bg: #ffffff;
+  --canvas-grid-bg: #e2e8f0;
+}
+
+/* Light Theme 2: Forest Moss (Earth Bio) */
+.theme-forest-moss {
+  --bg-app: #f4f6f0;
+  --text-app: #1c2d1b;
+  --text-muted: #5c705c;
+  --card-bg: #ffffff;
+  --card-border: rgba(46, 89, 46, 0.1);
+  --panel-bg: #e9ede0;
+  --accent: #2e592e;
+  --accent-text: #2e592e;
+  --accent-glow: rgba(46, 89, 46, 0.06);
+  --node-unvisited-bg: #ffffff;
+  --node-unvisited-stroke: #a3b8a3;
+  --node-unvisited-text: #3c523c;
+  --node-visited-bg: #e6f0e6;
+  --node-visited-stroke: #2e592e;
+  --node-visited-text: #173617;
+  --node-queue-bg: #fef9c3;
+  --node-queue-stroke: #ca8a04;
+  --node-queue-text: #713f12;
+  --node-active-bg: #4b804b;
+  --node-active-stroke: #2e592e;
+  --node-active-text: #ffffff;
+  --node-path-bg: #d1fae5;
+  --node-path-stroke: #10b981;
+  --node-path-text: #064e3b;
+  --node-failed-bg: #fee2e2;
+  --node-failed-stroke: #ef4444;
+  --node-failed-text: #991b1b;
+  --header-bg: rgba(244, 246, 240, 0.85);
+  --input-bg: #ffffff;
+  --canvas-grid-bg: #e2e6d9;
+}
+
+/* Light Theme 3: Warm Sand (Terracotta Sepia) */
+.theme-warm-sand {
+  --bg-app: #fbf8f3;
+  --text-app: #422a1d;
+  --text-muted: #8c7365;
+  --card-bg: #ffffff;
+  --card-border: rgba(216, 67, 21, 0.1);
+  --panel-bg: #f3ebdf;
+  --accent: #d84315;
+  --accent-text: #d84315;
+  --accent-glow: rgba(216, 67, 21, 0.06);
+  --node-unvisited-bg: #ffffff;
+  --node-unvisited-stroke: #c2ada0;
+  --node-unvisited-text: #5c4436;
+  --node-visited-bg: #fbe9e7;
+  --node-visited-stroke: #ff7043;
+  --node-visited-text: #bf360c;
+  --node-queue-bg: #fef9c3;
+  --node-queue-stroke: #ca8a04;
+  --node-queue-text: #713f12;
+  --node-active-bg: #ff7043;
+  --node-active-stroke: #d84315;
+  --node-active-text: #ffffff;
+  --node-path-bg: #d1fae5;
+  --node-path-stroke: #2e7d32;
+  --node-path-text: #1b5e20;
+  --node-failed-bg: #fee2e2;
+  --node-failed-stroke: #ff1744;
+  --node-failed-text: #b71c1c;
+  --header-bg: rgba(251, 248, 243, 0.85);
+  --input-bg: #ffffff;
+  --canvas-grid-bg: #eae3d4;
+}
+
+/* Light Theme 4: Ocean Breeze (Cool Azure Tech) */
+.theme-ocean-breeze {
+  --bg-app: #f0f6fa;
+  --text-app: #0f2c4a;
+  --text-muted: #5e7fa1;
+  --card-bg: #ffffff;
+  --card-border: rgba(2, 132, 199, 0.1);
+  --panel-bg: #e1edf6;
+  --accent: #0284c7;
+  --accent-text: #0284c7;
+  --accent-glow: rgba(2, 132, 199, 0.06);
+  --node-unvisited-bg: #ffffff;
+  --node-unvisited-stroke: #a2bcd6;
+  --node-unvisited-text: #2c4c6e;
+  --node-visited-bg: #e0f2fe;
+  --node-visited-stroke: #0284c7;
+  --node-visited-text: #0369a1;
+  --node-queue-bg: #fef9c3;
+  --node-queue-stroke: #ca8a04;
+  --node-queue-text: #713f12;
+  --node-active-bg: #38bdf8;
+  --node-active-stroke: #0284c7;
+  --node-active-text: #ffffff;
+  --node-path-bg: #ccfbf1;
+  --node-path-stroke: #0d9488;
+  --node-path-text: #115e59;
+  --node-failed-bg: #fee2e2;
+  --node-failed-stroke: #ef4444;
+  --node-failed-text: #991b1b;
+  --header-bg: rgba(240, 246, 250, 0.85);
+  --input-bg: #ffffff;
+  --canvas-grid-bg: #d7e4ef;
+}
+
+/* Light Theme 5: Sakura Pastel (Blossom Garden) */
+.theme-sakura-pastel {
+  --bg-app: #fff6f8;
+  --text-app: #4c1125;
+  --text-muted: #9c6c7b;
+  --card-bg: #ffffff;
+  --card-border: rgba(219, 39, 119, 0.1);
+  --panel-bg: #ffeef2;
+  --accent: #db2777;
+  --accent-text: #db2777;
+  --accent-glow: rgba(219, 39, 119, 0.06);
+  --node-unvisited-bg: #ffffff;
+  --node-unvisited-stroke: #f0b5c1;
+  --node-unvisited-text: #7c2d43;
+  --node-visited-bg: #fce7f3;
+  --node-visited-stroke: #ec4899;
+  --node-visited-text: #831843;
+  --node-queue-bg: #fef9c3;
+  --node-queue-stroke: #ca8a04;
+  --node-queue-text: #713f12;
+  --node-active-bg: #f472b6;
+  --node-active-stroke: #db2777;
+  --node-active-text: #ffffff;
+  --node-path-bg: #e0f2fe;
+  --node-path-stroke: #0284c7;
+  --node-path-text: #0369a1;
+  --node-failed-bg: #ffe4e6;
+  --node-failed-stroke: #f43f5e;
+  --node-failed-text: #9f1239;
+  --header-bg: rgba(255, 246, 248, 0.85);
+  --input-bg: #ffffff;
+  --canvas-grid-bg: #ffe4eb;
+}
+
+
+/* ----------------------------------------------------
+   UNIVERSAL THEMING ENGINE SELECTORS
+   ---------------------------------------------------- */
+
+.theme-container {
+  background-color: var(--bg-app) !important;
+  color: var(--text-app) !important;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Class style replacements for Cards */
+.theme-container .bg-white\/5 {
+  background-color: var(--card-bg) !important;
+  border-color: var(--card-border) !important;
+  transition: all 0.4s ease;
+}
+
+/* Specific section panels */
+.theme-container .bg-black\/30,
+.theme-container .bg-black\/40,
+.theme-container .bg-black\/60,
+.theme-container .bg-black\/75 {
+  background-color: var(--panel-bg) !important;
+  border-color: var(--card-border) !important;
+  transition: all 0.4s ease;
+}
+
+/* General Layout borders */
+.theme-container .border-white\/10 {
+  border-color: var(--card-border) !important;
+  transition: border-color 0.4s ease;
+}
+
+.theme-container .border-b,
+.theme-container .border-t,
+.theme-container .border {
+  border-color: var(--card-border) !important;
+}
+
+/* Input boxes, Select boxes, and Text areas */
+.theme-container input,
+.theme-container select,
+.theme-container textarea {
+  background-color: var(--input-bg) !important;
+  border-color: var(--card-border) !important;
+  color: var(--text-app) !important;
+  transition: all 0.3s ease;
+}
+
+.theme-container input:focus,
+.theme-container select:focus,
+.theme-container textarea:focus {
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 2px var(--accent-glow) !important;
+}
+
+/* Typography styles */
+.theme-container .text-slate-100,
+.theme-container .text-slate-200,
+.theme-container .text-slate-300,
+.theme-container .text-white {
+  color: var(--text-app) !important;
+  transition: color 0.3s ease;
+}
+
+.theme-container .text-slate-400,
+.theme-container .text-slate-500,
+.theme-container .text-slate-600 {
+  color: var(--text-muted) !important;
+  transition: color 0.3s ease;
+}
+
+/* Table elements */
+.theme-container th {
+  color: var(--text-app) !important;
+  border-bottom-color: var(--card-border) !important;
+}
+
+.theme-container td {
+  border-bottom-color: var(--card-border) !important;
+}
+
+/* Adaptive header styling */
+.theme-container header {
+  background-color: var(--header-bg) !important;
+  border-bottom-color: var(--card-border) !important;
+}
+
+/* Background canvas of SVGs */
+.theme-container .flex-1.bg-\[radial-gradient\(circle_at_center\,_\#121021_0\%_Font,_etc\)\] {
+  background: var(--canvas-grid-bg) !important;
+}
+
+/* Specifically target Dijkstra SVG canvas container */
+.theme-container g.transition-all line {
+  stroke: var(--text-muted) !important;
+}
+
+/* Highlight Optimal/Active SVG edges */
+.theme-container g.transition-all line[stroke="#10b981"] {
+  stroke: #10b981 !important; /* Always keep optimal path green */
+}
+
+/* SVG Weights badge rectangles */
+.theme-container g rect[fill="#0b0f19"] {
+  fill: var(--input-bg) !important;
+  stroke: var(--card-border) !important;
+}
+
+/* ----------------------------------------------------
+   SVG GRAPH NODES COLOR ENGINE
+   ---------------------------------------------------- */
+
+/* UNVISITED NODE STATE */
+.theme-container .gnode-circle[data-state="unvisited"] {
+  fill: var(--node-unvisited-bg) !important;
+  stroke: var(--node-unvisited-stroke) !important;
+}
+.theme-container .gnode-text[data-state="unvisited"] {
+  fill: var(--node-unvisited-text) !important;
+}
+
+/* VISITED NODE STATE */
+.theme-container .gnode-circle[data-state="visited"] {
+  fill: var(--node-visited-bg) !important;
+  stroke: var(--node-visited-stroke) !important;
+}
+.theme-container .gnode-text[data-state="visited"] {
+  fill: var(--node-visited-text) !important;
+}
+
+/* QUEUED / FRONTIER STATE */
+.theme-container .gnode-circle[data-state="queue"] {
+  fill: var(--node-queue-bg) !important;
+  stroke: var(--node-queue-stroke) !important;
+}
+.theme-container .gnode-text[data-state="queue"] {
+  fill: var(--node-queue-text) !important;
+}
+
+/* CURRENT VISITED ACTIVE NODE STATE */
+.theme-container .gnode-circle[data-state="active"] {
+  fill: var(--node-active-bg) !important;
+  stroke: var(--node-active-stroke) !important;
+}
+.theme-container .gnode-text[data-state="active"] {
+  fill: var(--node-active-text) !important;
+}
+
+/* FINAL OPTIMAL ROUTE PATH NODE STATE */
+.theme-container .gnode-circle[data-state="path"] {
+  fill: var(--node-path-bg) !important;
+  stroke: var(--node-path-stroke) !important;
+}
+.theme-container .gnode-text[data-state="path"] {
+  fill: var(--node-path-text) !important;
+}
+
+/* FAILED ROUTER STATE */
+.theme-container .gnode-circle[data-state="failed"] {
+  fill: var(--node-failed-bg) !important;
+  stroke: var(--node-failed-stroke) !important;
+}
+.theme-container .gnode-text[data-state="failed"] {
+  fill: var(--node-failed-text) !important;
+}
+
+
+/* ----------------------------------------------------
+   INDIGO BUTTON AND TABS OVERRIDES OVER VARS
+   ---------------------------------------------------- */
+
+.theme-container .text-indigo-400 {
+  color: var(--accent-text) !important;
+}
+
+.theme-container .bg-indigo-600 {
+  background-color: var(--accent) !important;
+  color: #ffffff !important;
+}
+
+.theme-container .border-indigo-500\/20 {
+  border-color: var(--card-border) !important;
+}
+
+.theme-container .bg-indigo-500\/10 {
+  background-color: var(--accent-glow) !important;
+  color: var(--accent-text) !important;
+}
+
+.theme-container .hover\:text-indigo-400:hover {
+  color: var(--accent-text) !important;
+}
+
+.theme-container .group-hover\:text-indigo-400:hover,
+.theme-container .group:hover .group-hover\:text-indigo-400 {
+  color: var(--accent-text) !important;
+}
+
+.theme-container .focus\:border-indigo-500:focus {
+  border-color: var(--accent) !important;
+}
+
+/* Interactive navigation tabs background active highlights */
+.theme-container nav {
+  background-color: var(--panel-bg) !important;
+  border-color: var(--card-border) !important;
+}
+
+.theme-container nav button.bg-indigo-600 {
+  background-color: var(--accent) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px var(--accent-glow) !important;
+}
+
+/* Style the clear state button */
+.theme-container button.border-white\/5 {
+  border-color: var(--card-border) !important;
+  background-color: var(--card-bg) !important;
+}
+
+.theme-container button.border-white\/5:hover {
+  background-color: var(--panel-bg) !important;
+  color: var(--accent-text) !important;
+}

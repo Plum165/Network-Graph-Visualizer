@@ -1,0 +1,6 @@
+{
+  "name": "Network Graph Visualizer",
+  "description": "Interactive educational tool visualizing Dijkstra Shortest Path and Distance Vector Routing algorithms.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
