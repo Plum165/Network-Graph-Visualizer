@@ -21,7 +21,7 @@ export const dijkstraLesson: LessonContent = {
     "In-game Pathfinding Modules (A* is a heuristic-driven extension of Dijkstra)",
     "Logistics and Supply Chain Routing Systems"
   ],
-  formula: "Distance(v) = \\min(Distance(v), Distance(u) + Weight(u, v))",
+  formula: "Distance(v) = min(Distance(v), Distance(u) + Weight(u, v))",
   insights: [
     {
       title: "The Greedy Strategy",
@@ -44,7 +44,7 @@ export const dvRoutingLesson: LessonContent = {
     "Cisco's proprietary EIGRP (Enhanced Interior Gateway Routing Protocol)",
     "Ad-Hoc Wireless Sensor Routing Protocols"
   ],
-  formula: "D_x(y) = \\min_v \\{ c(x,v) + D_v(y) \\}",
+  formula: "D_x(y) = min_v { c(x, v) + D_v(y) }",
   insights: [
     {
       title: "Distributed Bellman-Ford Principle",
